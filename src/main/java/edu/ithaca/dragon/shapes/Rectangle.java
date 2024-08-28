@@ -19,7 +19,8 @@ public class Rectangle {
     }
 
     public double longestLineWithin(){
-        throw new RuntimeException("Not implemented yet");
+        double longestLine = java.lang.Math.sqrt((length * length) + (width * width));
+        return longestLine;
     }
     
 }
