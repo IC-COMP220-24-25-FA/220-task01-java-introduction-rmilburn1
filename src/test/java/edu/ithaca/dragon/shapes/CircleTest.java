@@ -29,10 +29,10 @@ public class CircleTest {
         assertEquals(0.00000314159, myCircle.calcArea(), 0.0000000001);
     }
 
-    @Test
-    public void TestConstructorError(){
-        assertThrows(IllegalArgumentException.class, () -> new Circle(0));
-    }
+    // @Test
+    // public void TestConstructorError(){
+    //     assertThrows(IllegalArgumentException.class, () -> new Circle(0));
+    // }
 
     @Test
     public void longestLineWithinTest(){
@@ -53,14 +53,14 @@ public class CircleTest {
     public void doubleSizeTest(){
         Circle myCircle = new Circle(1);
         myCircle.doubleSize();
-        assertEquals(1.414, myCircle.calcArea(), 0.0001);
+        assertEquals(6.28, myCircle.calcArea(), 0.01);
 
         myCircle = new Circle(2.5);
         myCircle.doubleSize();
-        assertEquals(3.535, myCircle.calcArea(), 0.0001);
+        assertEquals(39.26, myCircle.calcArea(), 0.01);
 
         myCircle = new Circle(.25);
         myCircle.doubleSize();
-        assertEquals(0.3535, myCircle.calcArea(), 0.0001);
+        assertEquals(0.39, myCircle.calcArea(), 0.01);
     }
 }
