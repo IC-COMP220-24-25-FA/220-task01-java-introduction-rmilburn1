@@ -49,6 +49,18 @@ public class CircleTest {
         assertEquals(16, myCircle.longestLineWithin(), 0.0001);
     }
 
+    @Test
+    public void doubleSizeTest(){
+        Circle myCircle = new Circle(1);
+        myCircle.doubleSize();
+        assertEquals(1.414, myCircle.calcArea(), 0.0001);
 
-    
+        myCircle = new Circle(2.5);
+        myCircle.doubleSize();
+        assertEquals(3.535, myCircle.calcArea(), 0.0001);
+
+        myCircle = new Circle(.25);
+        myCircle.doubleSize();
+        assertEquals(0.3535, myCircle.calcArea(), 0.0001);
+    }
 }
