@@ -20,10 +20,22 @@ public class RectangleTest {
         assertEquals(0.25, rect.calcArea(), 0.001);
     }
 
+    @Test
     public void doubleSizeTest(){
-        
+        Rectangle rect = new Rectangle(3, 4);
+        rect.doubleSize();
+        assertEquals(48, rect.calcArea(), 0.001);
+
+        rect = new Rectangle(5, 5);
+        rect.doubleSize();
+        assertEquals(100, rect.calcArea(), 0.001);
+
+        rect = new Rectangle(.5, .5);
+        rect.doubleSize();
+        assertEquals(1, rect.calcArea(), 0.001);
     }
 
+    @Test
     public void longestLineWithinTest(){
 
     }
