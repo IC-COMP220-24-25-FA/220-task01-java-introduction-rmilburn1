@@ -37,6 +37,13 @@ public class RectangleTest {
 
     @Test
     public void longestLineWithinTest(){
+        Rectangle rect = new Rectangle(3, 4);
+        assertEquals(5, rect.longestLineWithin(), 0.001);
 
+        rect = new Rectangle(5, 5);
+        assertEquals(7.071, rect.longestLineWithin(), 0.001);
+
+        rect = new Rectangle(.5, .5);
+        assertEquals(0.707, rect.longestLineWithin(), 0.001);
     }
 }
