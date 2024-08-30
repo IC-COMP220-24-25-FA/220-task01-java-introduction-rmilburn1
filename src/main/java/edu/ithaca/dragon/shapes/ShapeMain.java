@@ -24,7 +24,11 @@ public class ShapeMain {
             System.out.println("\nChoose a rectangle (enter a number 1-5): ");
             int selection = input.nextInt();
             rectList.get(selection-1).doubleSize();
-            System.out.println(rectList);
+            for(int i=0; i<5; i++){
+                System.out.println("\nRectangle " + i);
+                System.out.println(rectList.get(i).calcArea());
+                System.out.println(rectList.get(i).longestLineWithin());
+            }
         }
 
     }
