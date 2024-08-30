@@ -12,7 +12,7 @@ public class ShapeMain {
         for(int i=0; i<5; i++){
             Rectangle r = new Rectangle(i, i);
             rectList.add(r);
-            System.out.println("\nRectangle " + i);
+            System.out.println("\nRectangle " + (i+1));
             System.out.println(r.calcArea());
             System.out.println(r.longestLineWithin());
         }
@@ -24,10 +24,10 @@ public class ShapeMain {
             System.out.println("\nChoose a rectangle (enter a number 1-5): ");
             int selection = input.nextInt();
             rectList.get(selection-1).doubleSize();
-            for(int i=0; i<5; i++){
-                System.out.println("\nRectangle " + i);
-                System.out.println(rectList.get(i).calcArea());
-                System.out.println(rectList.get(i).longestLineWithin());
+            for(int j=0; j<5; j++){
+                System.out.println("\nRectangle " + (j+1));
+                System.out.println(rectList.get(j).calcArea());
+                System.out.println(rectList.get(j).longestLineWithin());
             }
         }
 
