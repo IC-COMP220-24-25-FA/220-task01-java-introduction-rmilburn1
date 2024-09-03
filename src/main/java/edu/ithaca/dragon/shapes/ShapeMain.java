@@ -29,6 +29,7 @@ public class ShapeMain {
                 System.out.println(rectList.get(j).calcArea());
                 System.out.println(rectList.get(j).longestLineWithin());
             }
+        input.close();
         }
 
     }
