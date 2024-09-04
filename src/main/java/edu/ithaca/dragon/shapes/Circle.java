@@ -1,13 +1,16 @@
 package edu.ithaca.dragon.shapes;
 
-public class Circle {
+public class Circle implements Shape {
     private double radius;
 
     /**
      * @throws IllegalArgumentException if radius is not a positive number
      */
-    public Circle(double radius){
-        this.radius = radius;
+    public Circle(double rad){
+        if(rad <= 0){
+            throw new IllegalArgumentException("Your radius is zero! Try again.");
+        }
+        this.radius = rad;
     }
 
     /**
@@ -21,7 +24,7 @@ public class Circle {
      * @post doubles the size of this circle
      */
     public void doubleSize(){
-        this.radius = this.radius * 1.414;
+        radius = radius * 2;
     }
 
     /**
@@ -29,5 +32,9 @@ public class Circle {
      */
     public double longestLineWithin(){
         return radius * 2;
+    }
+
+    public String toString(){
+        return "Circle | radius: " + radius;
     }
 }
