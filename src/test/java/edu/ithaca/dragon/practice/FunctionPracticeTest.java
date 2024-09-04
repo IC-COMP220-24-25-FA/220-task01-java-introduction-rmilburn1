@@ -24,7 +24,6 @@ public class FunctionPracticeTest {
         assertEquals(5, FunctionPractice.largestOfThree(5, 5, 5));
         // Checks for the correct return value given that all attribute values are equal
 
-
         assertThrows(IllegalArgumentException.class, () -> FunctionPractice.largestOfThree(-1, -1, -1));
         // Checks to see if an IllegalArgumentException is thrown when all values are negative
 
@@ -38,6 +37,22 @@ public class FunctionPracticeTest {
     @Test
     public void calcSalePriceTest(){
         fail("Not implemented yet");
+    }
+
+    @Test
+    public void isGoodDogTest(){
+        assertTrue(FunctionPractice.isGoodDog(1, 8, false));
+        // Checks if function returns true if daysSinceShoesChewed > 7
+
+        assertFalse(FunctionPractice.isGoodDog(1, 6, false));
+        // Checks if function returns false if daysSinceShoesChewed < 7
+
+        assertTrue(FunctionPractice.isGoodDog(1, 4, true));
+        // Checks if function returns true if daysSinceShoesChewed < 7 but fetchedThePaper is true
+
+        assertTrue(FunctionPractice.isGoodDog(1, 8, true));
+        // Checks if function returns true if both daysSinceShoesChewed and fetchedThePaper conditions are met
+        
     }
     
 }
