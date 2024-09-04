@@ -36,4 +36,8 @@ public class Triangle {
             return sideThree;
         }
     }
+
+    public String toString(){
+        return "Triangle | side lengths: " + sideOne + ", " + sideTwo + ", " + sideThree;
+    }
 }

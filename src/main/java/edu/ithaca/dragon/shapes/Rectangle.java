@@ -4,9 +4,13 @@ public class Rectangle {
     private double length;
     private double width;
 
-    public Rectangle(double length, double width){
-        this.length = length;
-        this.width = width;
+    public Rectangle(double len, double wid){
+        if (len <= 0 || wid <= 0){
+            throw new IllegalArgumentException("One of your values is zero! Try again.");
+        }
+        
+        this.length = len;
+        this.width = wid;
     }
 
     public double calcArea(){
@@ -23,4 +27,7 @@ public class Rectangle {
         return longestLine;
     }
     
+    public String toString(){
+        return "Rectangle | length: " + length + " | width: " + width;
+    }
 }
