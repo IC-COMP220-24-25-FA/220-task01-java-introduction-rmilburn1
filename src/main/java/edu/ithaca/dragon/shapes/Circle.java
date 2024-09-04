@@ -1,6 +1,6 @@
 package edu.ithaca.dragon.shapes;
 
-public class Circle {
+public class Circle implements Shape {
     private double radius;
 
     /**
@@ -24,7 +24,7 @@ public class Circle {
      * @post doubles the size of this circle
      */
     public void doubleSize(){
-        this.radius = this.radius * 1.414;
+        radius = radius * 2;
     }
 
     /**

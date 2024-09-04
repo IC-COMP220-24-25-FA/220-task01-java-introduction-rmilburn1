@@ -1,6 +1,6 @@
 package edu.ithaca.dragon.shapes;
 
-public class Rectangle {
+public class Rectangle implements Shape {
     private double length;
     private double width;
 
@@ -9,8 +9,8 @@ public class Rectangle {
             throw new IllegalArgumentException("One of your values is zero! Try again.");
         }
         
-        this.length = len;
-        this.width = wid;
+        length = len;
+        width = wid;
     }
 
     public double calcArea(){
@@ -18,8 +18,8 @@ public class Rectangle {
     }
 
     public void doubleSize(){
-        this.length = this.length * 2;
-        this.width = this.width * 2;
+        length = length * 2;
+        width = width * 2;
     }
 
     public double longestLineWithin(){
